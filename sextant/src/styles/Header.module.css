@@ -1,0 +1,18 @@
+.mainContainer {
+  height: 12vh;
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  font-family: "raleway", sans-serif;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainContainer h1 {
+    /* background: url("https://nz.insight.com/content/dam/insight-web/sitesections/tech-journal/fall-2021/article-images/fall2021-techjournal-di-cloudedge-thumb.jpg")
+    center;
+    background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    letter-spacing: 1px;
+}
