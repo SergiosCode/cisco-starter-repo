@@ -1,17 +1,33 @@
 import React, { useState, useEffect } from "react";
 import styles from "../styles/DataComponent.module.css";
+import { getIPV4, getIPV6 } from "../api/getIP";
 
-function DataComponent({ title }) {
-  const [data1, setData] = useState("loading...");
+function DataComponent({ title, data, IPType }) {
+  const [data1, setData] = useState("Loading...");
+
+  // console.log(getIPV4.then(data => data));
 
   useEffect(() => {
-    fetch("https://api64.ipify.org?format=json").then((res) => {
-      res.json().then((data) => {
-        console.log(data.ip);
-        setData(data.ip);
+    // setData(data);
+
+    if (IPType === "IPV4") {
+      fetch("https://api.ipify.org?format=json").then((res) => {
+        res.json().then((data) => {
+          console.log(data.ip);
+          setData(`${data.ip}`);
+        });
       });
-    });
-  }, []);
+    } else if (IPType === "IPV6") {
+      fetch("https://api64.ipify.org?format=json").then((res) => {
+        res.json().then((data) => {
+          console.log(data.ip);
+          setData(`${data.ip}`);
+        });
+      });
+    } else if (IPType === undefined) {
+      setData(data);
+    }
+  }, [data]);
 
   return (
     <div className={styles.mainContainer}>
