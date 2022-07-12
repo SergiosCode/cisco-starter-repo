@@ -18,7 +18,7 @@ function App() {
        add the IPType variable with value 'IPV4' or 'IPV6' */}
       <div className="dataContainer">
         <DataComponent title={"IPv4"} IPType="IPV4" />
-        <DataComponent title={"IPv6"} IPType="IPV6" />
+        <DataComponent title={"IPv6"} IPType="IPV6" style={'font-size: 2px'} />
         <DataComponent title={"Latency"} data={"San Francisco, CA - 29.4 ms"} />
         <DataComponent title={"Random"} data={"Testing"} />
       </div>
