@@ -13,7 +13,6 @@ const Packets = () => {
     let startTime = new Date();
     JSON.parse(message.data);
 
-    let sum = message.data;
     setLatency(`${startTime - Number(message.data)} ms`);
   
   };
